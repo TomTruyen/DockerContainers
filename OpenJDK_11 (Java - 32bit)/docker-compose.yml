@@ -1,0 +1,6 @@
+version: '3.1'
+services:
+    database:
+        image: 'arm32v7/openjdk:11'
+        container_name: 'openjdk_11'
+        restart: always
