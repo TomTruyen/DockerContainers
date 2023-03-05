@@ -1,0 +1,17 @@
+version: '3.1'
+
+services:
+  database:
+    image: postgres
+    restart: always
+    environment:
+      - POSTGRES_DB=ktor
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=password
+    ports:
+      - 5432:5432
+    volumes:
+      - ./ktor-finance-tracker:/var/lib/postgresql/data
+
+volumes:
+  ktor-finance-tracker:
